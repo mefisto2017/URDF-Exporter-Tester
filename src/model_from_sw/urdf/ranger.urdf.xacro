@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ranger">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.075852 0.00019302 0.14511"
+        rpy="0 0 0" />
+      <mass
+        value="11.629" />
+      <inertia
+        ixx="0.10846"
+        ixy="6.5687E-06"
+        ixz="-0.00038986"
+        iyy="0.21799"
+        iyz="2.7049E-07"
+        izz="0.30803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="steering_back_left">
+    <inertial>
+      <origin
+        xyz="0.0002636 -0.0073207 -0.061847"
+        rpy="0 0 0" />
+      <mass
+        value="0.29247" />
+      <inertia
+        ixx="0.0001931"
+        ixy="-4.3946E-09"
+        ixz="-1.9372E-08"
+        iyy="0.00019526"
+        iyz="1.6236E-07"
+        izz="0.00025668" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_back_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_back_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steering_back_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.097834 0.1792 0.064"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steering_back_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="wheel_back_left">
+    <inertial>
+      <origin
+        xyz="1.44643904886887E-06 -0.00123310380354077 -1.25558017387978E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.12009995547519" />
+      <inertia
+        ixx="0.00264995117951645"
+        ixy="1.26358082975158E-09"
+        ixz="8.81688298757903E-08"
+        iyy="0.00496694769533472"
+        iyz="-8.07547874702916E-09"
+        izz="0.00264999212678623" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_back_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_back_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_back_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0001 -0.181"
+      rpy="0 0 0" />
+    <parent
+      link="steering_back_left" />
+    <child
+      link="wheel_back_left" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="steering_front_left">
+    <inertial>
+      <origin
+        xyz="0.000263599170033602 -0.00732067734147633 -0.0618468562082783"
+        rpy="0 0 0" />
+      <mass
+        value="0.29247319686797" />
+      <inertia
+        ixx="0.000193095426179074"
+        ixy="-4.39455777299121E-09"
+        ixz="-1.93721289421387E-08"
+        iyy="0.000195255941385406"
+        iyz="1.62356868689595E-07"
+        izz="0.000256677021142508" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steering_front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.26217 0.1762 0.064"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steering_front_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="wheel_front_left">
+    <inertial>
+      <origin
+        xyz="-1.73891261601167E-06 -0.00423307096668234 -4.59878817929416E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.12009201621655" />
+      <inertia
+        ixx="0.00264989431967157"
+        ixy="-7.37378196687903E-09"
+        ixz="-4.16583171041312E-08"
+        iyy="0.00496691698509497"
+        iyz="3.52661635347903E-09"
+        izz="0.00265001883369126" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0029 -0.181"
+      rpy="0 0 0" />
+    <parent
+      link="steering_front_left" />
+    <child
+      link="wheel_front_left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="steering_front_right">
+    <inertial>
+      <origin
+        xyz="-0.000263599170033602 0.0073206773414764 -0.0618468562082778"
+        rpy="0 0 0" />
+      <mass
+        value="0.292473196867971" />
+      <inertia
+        ixx="0.000193095426179018"
+        ixy="-4.39455778045107E-09"
+        ixz="1.93721289432918E-08"
+        iyy="0.000195255941385346"
+        iyz="-1.62356868687798E-07"
+        izz="0.000256677021142503" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steering_front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.26217 -0.1838 0.064"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steering_front_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="wheel_front_right">
+    <inertial>
+      <origin
+        xyz="-1.78655678095829E-06 0.00123308745467321 5.12643639899446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.12009597119316" />
+      <inertia
+        ixx="0.0026498786068971"
+        ixy="6.16034431368133E-09"
+        ixz="2.07099113666727E-09"
+        iyy="0.00496690935857715"
+        iyz="5.11118379303161E-09"
+        izz="0.00265002338003414" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0001 -0.181"
+      rpy="0 0 0" />
+    <parent
+      link="steering_front_right" />
+    <child
+      link="wheel_front_right" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="steering_back_right">
+    <inertial>
+      <origin
+        xyz="-0.000263599170033713 0.00732067734147651 -0.0618468562082778"
+        rpy="0 0 0" />
+      <mass
+        value="0.29247319686797" />
+      <inertia
+        ixx="0.000193095426179019"
+        ixy="-4.39455777721689E-09"
+        ixz="1.93721289431186E-08"
+        iyy="0.000195255941385371"
+        iyz="-1.62356868687715E-07"
+        izz="0.000256677021142529" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_back_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/steering_back_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steering_back_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.097834 -0.1838 0.064"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steering_back_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="wheel_back_right">
+    <inertial>
+      <origin
+        xyz="-3.14213317531564E-07 0.00123307096668235 -1.77103800183542E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.12009201621657" />
+      <inertia
+        ixx="0.00265002485860397"
+        ixy="-4.12547169386481E-09"
+        ixz="-3.08047028174187E-08"
+        iyy="0.00496691698509505"
+        iyz="7.05621475503754E-09"
+        izz="0.00264988829475893" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_back_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_tester/meshes/wheel_back_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_back_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0001 -0.181"
+      rpy="0 0 0" />
+    <parent
+      link="steering_back_right" />
+    <child
+      link="wheel_back_right" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>
