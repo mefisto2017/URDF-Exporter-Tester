@@ -40,7 +40,7 @@ git clone git@github.com:mefisto2017/URDF-Exporter-Tester.git
 <br />
 
 - Edit the display file in the launch folder
-  - Change line 6 to <name>.urdf.xacro
+  - Change line 6 to *name*.urdf.xacro
 
 ![This is an image](images/display_launch.png)
 
