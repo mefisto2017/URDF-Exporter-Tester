@@ -26,7 +26,17 @@ git clone git@github.com:mefisto2017/URDF-Exporter-Tester.git
 ```
 
 - Replace "*config*", "*meshes*" and "*urdf*" folders by the ones generated in Solidworks
+<br />
 
+
+### Method 1
+- Run setup.py script located on the main folder
+```
+./setup.py
+```
+
+
+### Method 2
 
 - Rename the urdf file in the folder urdf as *name*.urdf.xacro
 
