@@ -32,7 +32,7 @@ with open(urdf_path + '/' + urdf_file[-1], 'r') as file :
   filedata = file.read()
 
 # Replace the target string
-filedata = filedata.replace(name, 'robot1')
+filedata = filedata.replace(name, 'urdf_tester')
 
 # xacro file
 xacro = urdf_file[-1] + '.xacro'
@@ -41,7 +41,8 @@ xacro = urdf_file[-1] + '.xacro'
 with open(urdf_path + '/' + xacro, 'w') as file:
   file.write(filedata)
 
-
+# Delete old file
+os.remove(urdf_path + '/' + urdf_file[-1])
 
 # Launch Folder
 # List files in launch folder
