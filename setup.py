@@ -4,7 +4,7 @@ import os
 
 # Get absolute path
 path = os.getcwd()
-path = path + '/src' + '/model_from_sw'
+path = path + '/src' + '/urdf_tester'
 
 # Folder paths
 urdf_path = path + '/urdf'
